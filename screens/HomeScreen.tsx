@@ -1,8 +1,8 @@
 import { useNavigation } from '@react-navigation/native';
 import { useLayoutEffect } from 'react';
-import { Image, Text, View } from 'react-native';
+import { Image, ScrollView, Text, TextInput, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { ChevronDownIcon, UserIcon } from 'react-native-heroicons/outline';
+import { AdjustmentsIcon, ChevronDownIcon, SearchIcon, UserIcon } from 'react-native-heroicons/outline';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -14,9 +14,9 @@ const HomeScreen = () => {
   });
 
   return (
-    <SafeAreaView className="bg-white">
+    <SafeAreaView className="bg-white px-4">
       {/* Header */}
-      <View className="flex-row py-3 items-center mx-4 space-x-2">
+      <View className="flex-row py-3 items-center space-x-2">
         <Image
           source={{
             uri: 'https://links.papareact.com/wru',
@@ -33,6 +33,14 @@ const HomeScreen = () => {
         <UserIcon size={28} color="#00ccbb" />
       </View>
       {/* Search */}
+      <View className="flex-row items-center space-x-2 pb-2">
+        <View className="flex-row flex-1 items-center space-x-2 bg-gray-200 mr-2 p-3">
+          <SearchIcon size={20} color="gray" />
+          <TextInput placeholder="Restaurants and cuisines" keyboardType="default" className="flex-1" />
+        </View>
+        <AdjustmentsIcon size={28} color="#00ccbb" />
+      </View>
+      <ScrollView />
     </SafeAreaView>
   );
 };
