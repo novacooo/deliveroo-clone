@@ -1,9 +1,10 @@
 import { useNavigation } from '@react-navigation/native';
-import { useLayoutEffect } from 'react';
+import React, { useLayoutEffect } from 'react';
 import { Image, ScrollView, Text, TextInput, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { AdjustmentsIcon, ChevronDownIcon, SearchIcon, UserIcon } from 'react-native-heroicons/outline';
 import Categories from '../components/Categories';
+import FeaturedRow from '../components/FeaturedRow';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -49,6 +50,9 @@ const HomeScreen = () => {
         {/* Categories */}
         <Categories />
         {/* Featured rows */}
+        <FeaturedRow id="123" title="Featured" description="Paid placements from our partners" />
+        <FeaturedRow id="1234" title="Tasty discounts" description="Everyone's been enjoying these juicy discounts!" />
+        <FeaturedRow id="12345" title="Offers near you" description="Why not support your local restaurant tonight?" />
       </ScrollView>
     </SafeAreaView>
   );
