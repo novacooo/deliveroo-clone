@@ -1,9 +1,25 @@
-import { View, Text } from 'react-native';
+import { ScrollView } from 'react-native';
+import CategoryCard from './CategoryCard';
 
 const Categories = () => (
-  <View>
-    <Text>Categories</Text>
-  </View>
+  <ScrollView
+    horizontal
+    showsHorizontalScrollIndicator={false}
+    contentContainerStyle={{
+      paddingVertical: 10,
+      paddingStart: 16,
+      paddingEnd: 8,
+    }}
+  >
+    {/* CategoryCard */}
+    <CategoryCard imgUrl="https://links.papareact.com/gn7" title="Testing" />
+    <CategoryCard imgUrl="https://links.papareact.com/gn7" title="Testing" />
+    <CategoryCard imgUrl="https://links.papareact.com/gn7" title="Testing" />
+    <CategoryCard imgUrl="https://links.papareact.com/gn7" title="Testing" />
+    <CategoryCard imgUrl="https://links.papareact.com/gn7" title="Testing" />
+    <CategoryCard imgUrl="https://links.papareact.com/gn7" title="Testing" />
+    <CategoryCard imgUrl="https://links.papareact.com/gn7" title="Testing" />
+  </ScrollView>
 );
 
 export default Categories;
